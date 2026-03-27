@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemanshi Gajra | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  color: #333;
+  perspective: 1000px;
+}
+
+header {
+  text-align: center;
+  padding: 50px;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transform: rotateX(5deg);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff9a9e;
+  transform: scale(1.2) translateZ(20px);
+}
+
+.container {
+  padding: 20px;
+}
+
+.section {
+  padding: 40px;
+  margin: 20px 0;
+  border-radius: 20px;
+  line-height: 1.8;
+  background: white;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.section:hover {
+  transform: rotateY(5deg) rotateX(5deg) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+#about { background: linear-gradient(120deg, #a1c4fd, #c2e9fb); }
+#skills { background: linear-gradient(120deg, #fbc2eb, #a6c1ee); }
+#projects { background: linear-gradient(120deg, #fddb92, #d1fdff); }
+#certificate { background: linear-gradient(120deg, #84fab0, #8fd3f4); }
+#contact { background: linear-gradient(120deg, #fccb90, #d57eeb); }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.skills span {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px 16px;
+  margin: 6px;
+  border-radius: 30px;
+  display: inline-block;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.skills span:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+.project {
+  margin: 15px 0;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project:hover {
+  transform: translateX(15px) scale(1.05);
+  background: rgba(255,255,255,0.9);
+}
+
+button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(120deg, #000, #444);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.dark {
+  background: #121212;
+  color: #eee;
+}
+
+.dark .section { background: #1e1e1e !important; }
+.dark nav { background: #000; }
+.dark header { background: #333; color: white; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Hemanshi Gajra</h1>
+<p>Aspiring Data Analyst | Creative Thinker</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<div class="section" id="about">
+<h2>About Me</h2>
+<p>I am a BSc IT student passionate about data analytics. I enjoy exploring data, finding patterns, and creating meaningful insights.</p>
+</div>
+
+<div class="section" id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<span>Python</span>
+<span>SQL</span>
+<span>Excel</span>
+<span>Data Analysis</span>
+<span>Visualization</span>
+</div>
+</div>
+
+<div class="section" id="projects">
+<h2>Projects</h2>
+<div class="project" onclick="showDetails('Analyzed student data using Python & Excel')">📊 Student Performance Analysis</div>
+<div class="project" onclick="showDetails('Identified crime trends using data visualization')">🚔 Crime Rate Analysis</div>
+<div class="project" onclick="showDetails('Built Excel dashboard for sales insights')">📈 Sales Dashboard</div>
+<div class="project" onclick="showDetails('Segmented customers using data techniques')">👥 Customer Segmentation</div>
+</div>
+
+<div class="section" id="certificate">
+<h2>Certificate</h2>
+<p>Introduction to Generative AI<br>9 Jan 2026 | Code: 9695468</p>
+</div>
+
+<div class="section" id="contact">
+<h2>Contact</h2>
+<p>📞 8369747488<br>
+📧 gajrahemanshi@gmail.com<br>
+📍 Navi Mumbai</p>
+</div>
+
+</div>
+
+<button onclick="toggleDark()">🌙</button>
+
+<footer>
+© 2026 Hemanshi Gajra
+</footer>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle('dark');
+}
+
+function showDetails(text){
+  alert(text);
+}
+
+ document.querySelectorAll('nav a').forEach(link => {
+   link.addEventListener('click', function(e){
+     e.preventDefault();
+     document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+   });
+ });
+</script>
+
+</body>
+</html>
